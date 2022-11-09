@@ -12,7 +12,16 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text('Welcome to $days days of flutter'),
+          child: Column(
+            children: [
+              Text('Welcome to $days days of flutter'),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/login");
+                  },
+                  child: Text("Login Page"))
+            ],
+          ),
         ),
       ),
       drawer: Drawer(),
